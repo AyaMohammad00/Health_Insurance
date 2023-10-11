@@ -1,0 +1,51 @@
+﻿@model Userccount
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<!-- contact section -->
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Login
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container contact-form">
+                    <form asp-action="Login" method="post" enctype="multipart/form-data">
+                        
+                        <div>
+                            <input name="Email" id="Email" asp-for="Email" type="email" placeholder="Enter Your Email" />
+                        </div>
+
+                        <div>
+                            <input name="Password" id="Password" asp-for="Password" type="password" placeholder="Enter Your Password" />
+                        </div>
+
+                        <p style="color:red">@ViewBag.Error</p>
+
+
+                        <div class="btn_box">
+                            <button>
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            @*<div class="col-md-6">
+            <div class="map_container">
+            <div class="map">
+            <div id="googleMap"></div>
+            </div>
+            </div>
+            </div>*@
+        </div>
+    </div>
+</section>
+<!-- end contact section -->
+

@@ -1,0 +1,169 @@
+﻿@*@model IEnumerable<Health_Insurance.Models.Contactu>
+*@
+@*@model Contactu;
+*@
+   
+@model Health_Insurance.Models.Contactu
+
+    @{
+    ViewData["Title"] = "Create";
+}
+
+@*<!-- contact section -->
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Get In Touch
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container contact-form">
+                    <form action=Index >
+                        <div class="form-row">
+                            <div class="col-lg-6">
+                                <div>
+                                    <input  type="text" placeholder="Your Name" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div>
+                                    <input  type="text" placeholder="Phone Number" />
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <input  type="email" placeholder="Email" />
+                        </div>
+                        <div>
+                            <input  type="text" class="message-box" placeholder="Message" />
+                        </div>
+                        <div class="btn_box">
+                            <button>
+                                SEND
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container">
+                    <div class="map">
+                        <div id="googleMap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact section -->*@
+
+
+<!-- contact section -->
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Get In Touch
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container contact-form">
+                    <form asp-action="Create" method="post">
+                        <div class="form-row">
+                            <div class="col-lg-6">
+                                <div>
+                                    <input asp-for="Name"  name="Name" id="Name" type="text" placeholder="Your Name" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div>
+                                    <input name="Phonenumber" id="Phonenumber" asp-for="Phonenumber" type="text" placeholder="Phone Number" />
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <input name="Email" id="Email" asp-for="Email" type="email" placeholder="Email" />
+                        </div>
+                        <div>
+                            <input name="Message" id="Message" asp-for="Message" type="text" class="message-box" placeholder="Message" />
+                        </div>
+                        <div class="btn_box">
+                            <button>
+                                SEND
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container">
+                    <div class="map">
+                        <div id="googleMap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact section -->
+
+
+
+
+
+
+
+
+
+
+@*<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phonenumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phonenumber)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+*@

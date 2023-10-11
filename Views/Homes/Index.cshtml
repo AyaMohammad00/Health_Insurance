@@ -1,0 +1,163 @@
+﻿@model IEnumerable<Health_Insurance.Models.Home>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    Layout = "_Layout";
+
+}
+
+<!-- department section -->
+
+<section class="department_section layout_padding">
+    <div class="department_container">
+        <div class="container ">
+            <div class="heading_container heading_center">
+                <h2>
+                    Our Departments
+                </h2>
+                <p>
+                    Asperiores sunt consectetur impedit nulla molestiae delectus repellat laborum dolores doloremque accusantium
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="~/HomeAssets/images/s1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Cardiology
+                            </h5>
+                            <p>
+                                fact that a reader will be distracted by the readable page when looking at its layout.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="~/HomeAssets/images/s2.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Diagnosis
+                            </h5>
+                            <p>
+                                fact that a reader will be distracted by the readable page when looking at its layout.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="~/HomeAssets/images/s3.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Surgery
+                            </h5>
+                            <p>
+                                fact that a reader will be distracted by the readable page when looking at its layout.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="~/HomeAssets/images/s4.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                First Aid
+                            </h5>
+                            <p>
+                                fact that a reader will be distracted by the readable page when looking at its layout.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="">
+                    View All
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end department section -->
+
+
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Logo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Homeimage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facebook)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instgram)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Homeimage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facebook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instgram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
